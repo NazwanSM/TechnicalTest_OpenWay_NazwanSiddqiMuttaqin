@@ -224,3 +224,26 @@ Key design points:
 - No username, password, or personal information is hardcoded.
 
 The automated test covers `TC-CART-001`, the main positive path for adding one available product to the shopping cart.
+
+## 5. Test Execution Summary
+
+The automated test was executed locally using Maven and TestNG.
+
+| Item | Result |
+| --- | --- |
+| Scenario | TC-CART-001 - Add one available product to cart successfully |
+| Browser | Google Chrome |
+| Automation Stack | Java, Selenium WebDriver, TestNG, Maven |
+| Command | `mvn test` |
+| Execution Status | Passed |
+| Evidence | The test successfully logged in, searched for a product, opened the product detail page, added the product to the cart, and verified that the cart contained the selected product. |
+
+### Executed Automated Test
+
+| Test Case ID | Title | Automation Status | Notes |
+| --- | --- | --- | --- |
+| TC-CART-001 | Add one available product to cart successfully | Passed | Covered by `ShoppingCartTest.shouldAddSearchedProductToCart()` |
+
+### Not Automated Test Cases
+
+The remaining cart test cases are provided as manual test documentation to cover broader shopping cart behavior, including quantity update, item removal, cart persistence, empty cart state, out-of-stock product handling, and product information validation.
