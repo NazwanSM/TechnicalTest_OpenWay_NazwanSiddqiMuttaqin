@@ -52,8 +52,7 @@ public abstract class BaseTest {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             try {
-                LOG.error("Test failed. Screenshot saved at {}",
-                        ScreenshotUtil.capture(driver, result.getMethod().getMethodName()));
+                LOG.error("Test failed. Screenshot saved at {}", ScreenshotUtil.capture(driver, result.getMethod().getMethodName()));
             } catch (IOException screenshotException) {
                 LOG.error("Could not capture failure screenshot", screenshotException);
             }
